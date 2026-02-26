@@ -9,6 +9,10 @@ CORS(app)
 upload_folder = "uploads"
 os.makedirs(upload_folder,exist_ok=True)
 
+@app.route('/')
+def home():
+    return "Server is up!", 200
+
 @app.route('/task' , methods=['GET' , 'POST'])
 def test_image():
     if "myImage" not in request.files:
