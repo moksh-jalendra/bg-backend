@@ -12,7 +12,14 @@ os.makedirs(upload_folder, exist_ok=True)
 
 @app.route('/')
 def home():
-    return "Background Remover API is online!", 200
+    r@app.route('/')
+def home():
+    # This lets you verify the code version just by visiting the URL
+    return {
+        "status": "online",
+        "version": "v2-rembg-portable", 
+        "engine": "u2netp"
+    }, 200
 
 @app.route('/task', methods=['POST'])
 def test_image():
